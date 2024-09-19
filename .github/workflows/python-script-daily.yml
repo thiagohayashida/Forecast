@@ -2,7 +2,7 @@ name: Run Python Script Daily
 
 on:
   schedule:
-    - cron: "0 10 * * *"  # Isso configura para rodar o script todos os dias às 8h UTC (ajuste conforme necessário)
+    - cron: "0 13 * * *"  # Isso configura para rodar o script todos os dias às 8h UTC (ajuste conforme necessário)
 
 jobs:
   run_script:
@@ -14,7 +14,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Ajuste para a versão do Python que você usa (ex: '3.8')
+          python-version: '3.10'  # Ajuste para a versão do Python que você usa (ex: '3.8')
 
       - name: Install dependencies
         run: |
