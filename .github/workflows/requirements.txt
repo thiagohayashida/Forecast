@@ -1,0 +1,9 @@
+google-cloud-bigquery
+google-colab
+pandas-gbq
+gspread
+pandas
+matplotlib
+seaborn
+scikit-learn
+numpy
