@@ -1,0 +1,25 @@
+name: Run Python Script Daily
+
+on:
+  schedule:
+    - cron: "0 10 * * *"  # Isso configura para rodar o script todos os dias às 8h UTC (ajuste conforme necessário)
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Ajuste para a versão do Python que você usa (ex: '3.8')
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Se você tiver um arquivo de dependências, adicione-o ao repositório
+
+      - name: Run Python Script
+        run: |
+          python forecast_direto.py  # Esse é o nome do seu arquivo Python que será executado diariamente
